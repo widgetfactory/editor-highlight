@@ -12,6 +12,7 @@
 	<icon>highlight</icon>
 	<files folder="plugins/jce/editor-highlight">
 		<file plugin="editor-highlight">editor_plugin.js</file>
+		<file>index.html</file>
 		<folder>img</folder>
 	</files>
 	<params group="standard"></params>
