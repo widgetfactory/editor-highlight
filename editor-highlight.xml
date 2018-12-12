@@ -8,7 +8,7 @@
 	<authorUrl>https://www.joomlacontenteditor.net/</authorUrl>
 	<copyright>Copyright (C) 2006 - 2018 Ryan Demmer. All rights reserved</copyright>
 	<license>GNU/GPL Version 2 - http://www.gnu.org/licenses/gpl-2.0.html</license>
-	<description>Custom HTML plugin for JCE</description>
+	<description>Highlightjs Code formatting plugin for JCE</description>
 	<icon>highlight</icon>
 	<files folder="plugins/jce/editor-highlight">
 		<file plugin="editor-highlight">editor_plugin.js</file>
