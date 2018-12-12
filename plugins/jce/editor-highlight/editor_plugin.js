@@ -31,20 +31,6 @@
 
     tinymce.create('tinymce.plugins.Highlight', {
         init: function (ed, url) {
-
-            ed.onInit.add(function () {
-                ed.formatter.register('code_highlight', {
-                    inline: 'code',
-                    onformat: function (elm, fmt, vars) {
-                        ed.dom.addClass(elm, vars);
-
-                        if (elm.parentNode !== "PRE") {
-                            ed.formatter.apply('pre');
-                        }
-                    }
-                });
-            });
-
             this.editor = ed;
         },
 
@@ -55,7 +41,18 @@
                 var list = cm.createListBox('highlight', {
                     title: 'Highlight',
                     onselect: function (value) {
-                        ed.formatter.apply('code_highlight', value);
+                        var text = ed.selection.getContent();
+                        var node = ed.selection.getNode();
+
+                        ed.undoManager.add();
+
+                        ed.selection.setContent('<code class="' + value + '">' + text + '</code>');
+                        
+                        if (node.nodeName !== "PRE") {
+                            ed.formatter.apply('pre');
+                        }
+
+                        ed.undoManager.add();
                     }
                 });
 
