@@ -45,6 +45,10 @@
                         var node = ed.selection.getNode();
 
                         ed.undoManager.add();
+                        
+                        if (node.nodeName === "CODE") {
+                            return ed.dom.setAttrib(node, 'class', value);
+                        }
 
                         ed.selection.setContent('<code class="' + value + '">' + text + '</code>');
                         
