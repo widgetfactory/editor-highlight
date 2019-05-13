@@ -9,7 +9,7 @@
 	<copyright>Copyright (C) 2006 - 2018 Ryan Demmer. All rights reserved</copyright>
 	<license>GNU/GPL Version 2 - http://www.gnu.org/licenses/gpl-2.0.html</license>
 	<description>Highlightjs Code formatting plugin for JCE</description>
-	<icon image="plugins/jce/img/highlight.png">highlight</icon>
+	<icon class="list-box" image="">highlight</icon>
 	<files folder="plugins/jce/editor-highlight">
 		<file plugin="editor-highlight">editor_plugin.js</file>
 		<file>index.html</file>
